@@ -1,2 +1,6 @@
-# dotfiles
-.dotfiles
+#dotfiles  
+
+---  
+
+Gitとvimの勉強を兼ねて訳もなく作られたリポジトリである
+徐々に.vimrcをカスタマイズしていく予定
