@@ -26,6 +26,7 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'tpope/vim-fugitive'
 "--- colorscheme -------------
 NeoBundle 'sjl/badwolf'
 "-----------------------------
