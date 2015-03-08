@@ -7,6 +7,8 @@
 "------------------------------------- 
 colorscheme badwolf
 syntax on
+autocmd InsertEnter *   set shellslash
+autocmd InsertLeave *   set noshellslash
 
 "-------------------------------------
 " Start Neobundle Settings.
@@ -27,6 +29,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'thinca/vim-quickrun'
+nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 "--- colorscheme -------------
 NeoBundle 'sjl/badwolf'
 "-----------------------------
