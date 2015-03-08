@@ -9,6 +9,9 @@ colorscheme badwolf
 syntax on
 autocmd InsertEnter *   set shellslash
 autocmd InsertLeave *   set noshellslash
+set iminsert=0
+set imsearch=0
+
 
 "-------------------------------------
 " Start Neobundle Settings.
