@@ -26,37 +26,31 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 "******************************************
 " lightline
 "******************************************
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ 'mode_map': {'c': 'NORMAL'},
-      \ 'active': {
-      \   'left': [ ['mode', 'paste'], ['fugitive', 'filename', 'cakephp', 'currenttag', 'anzu'] ]
-      \ },
-      \ 'component': {
-      \   'lineinfo': 'рв %3l:%-2v',
-      \ },
-      \ 'component_function': {
-      \   'modified': 'MyModified',
-      \   'readonly': 'MyReadonly',
-      \   'fugitive': 'MyFugitive',
-      \   'filename': 'MyFilename',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'MyFileencoding',
-      \   'mode': 'MyMode',
-      \   'anzu': 'anzu#search_status',
-      \   'currenttag': 'MyCurrentTag',
-      \   'cakephp': 'MyCakephp',
-      \ }
-      \ }
 
+let g:lightline = {
+        \ 'colorscheme': 'wombat',
+        \ 'mode_map': {'c': 'NORMAL'},
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+        \ },
+        \ 'component_function': {
+        \   'modified': 'MyModified',
+        \   'readonly': 'MyReadonly',
+        \   'fugitive': 'MyFugitive',
+        \   'filename': 'MyFilename',
+        \   'fileformat': 'MyFileformat',
+        \   'filetype': 'MyFiletype',
+        \   'fileencoding': 'MyFileencoding',
+        \   'mode': 'MyMode'
+        \ }
+        \ }
 
 function! MyModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'рг ' : ''
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
 endfunction
 
 function! MyFilename()
@@ -70,8 +64,8 @@ endfunction
 
 function! MyFugitive()
   try
-    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head') && strlen(fugitive#head())
-      return 'рб ' . fugitive#head()
+    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
+      return fugitive#head()
     endif
   catch
   endtry
@@ -92,12 +86,4 @@ endfunction
 
 function! MyMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
-
-function! MyCurrentTag()
-  return tagbar#currenttag('%s', '')
-endfunction
-
-function! MyCakephp()
-  return exists('*cake#buffer') ? cake#buffer('type') : ''
 endfunction

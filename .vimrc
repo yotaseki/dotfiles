@@ -7,7 +7,7 @@ autocmd InsertEnter *   set shellslash
 autocmd InsertLeave *   set noshellslash
 set iminsert=0
 set imsearch=0
-
+set laststatus=2
 "-------------------------------------
 " Start Neobundle Settings.
 "-------------------------------------
@@ -38,7 +38,7 @@ source ~/.vim/.vimrc.plugins_setting
 "colorscheme
 "--------------------------------------
 NeoBundle 'sjl/badwolf'
-
+NeoBundle 'mrkn/mrkn256.vim'
 
 "--------------------------------------
 " End Neobundle Settings.
