@@ -19,7 +19,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
  
 " neobundle control in itself
 NeoBundleFetch 'Shougo/neobundle.vim'
- 
+
 "--------------------------------------
 " Plugins
 "--------------------------------------
@@ -39,6 +39,7 @@ source ~/.vim/.vimrc.plugins_setting
 "--------------------------------------
 NeoBundle 'sjl/badwolf'
 NeoBundle 'mrkn/mrkn256.vim'
+NeoBundle 'itchyny/landscape.vim'
 
 "--------------------------------------
 " End Neobundle Settings.
