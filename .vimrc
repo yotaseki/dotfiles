@@ -8,6 +8,14 @@ autocmd InsertLeave *   set noshellslash
 set iminsert=0
 set imsearch=0
 set laststatus=2
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set smartindent
+set backspace=2
+source ~/.vim/.vimrc.set_hotkey
 "-------------------------------------
 " Start Neobundle Settings.
 "-------------------------------------
@@ -32,8 +40,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
-
-source ~/.vim/.vimrc.plugins_setting
+ 
+source ~/.vim/.vimrc.set_plugins
 "--------------------------------------
 "colorscheme
 "--------------------------------------
