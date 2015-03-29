@@ -15,6 +15,7 @@ set softtabstop=4
 set autoindent
 set smartindent
 set backspace=2
+set backup
 source ~/.vim/.vimrc.set_hotkey
 "-------------------------------------
 " Start Neobundle Settings.
