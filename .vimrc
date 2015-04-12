@@ -16,6 +16,7 @@ set autoindent
 set smartindent
 set backspace=2
 set backup
+set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 "-------------------------------------
 " Start Neobundle Settings.
