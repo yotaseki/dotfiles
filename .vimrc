@@ -1,7 +1,6 @@
 "-------------------------------------
 "env
 "------------------------------------- 
-colorscheme badwolf
 syntax on
 autocmd InsertEnter *   set shellslash
 autocmd InsertLeave *   set noshellslash
@@ -15,8 +14,8 @@ set softtabstop=4
 set autoindent
 set smartindent
 set backspace=2
-set backup
-set backupdir=~/Documents/vim~
+set nobackup
+"set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 "-------------------------------------
 " Start Neobundle Settings.
@@ -51,6 +50,7 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'itchyny/landscape.vim'
 
+colorscheme badwolf
 "--------------------------------------
 " End Neobundle Settings.
 "--------------------------------------
