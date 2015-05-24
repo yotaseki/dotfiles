@@ -50,6 +50,7 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'itchyny/landscape.vim'
 
+set t_Co=256
 colorscheme badwolf
 "--------------------------------------
 " End Neobundle Settings.
