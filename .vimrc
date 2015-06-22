@@ -8,13 +8,13 @@ set iminsert=0
 set imsearch=0
 set laststatus=2
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set autoindent
 set smartindent
 set backspace=2
-set nobackup
+set backup
 "set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 "-------------------------------------
