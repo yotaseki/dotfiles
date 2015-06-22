@@ -50,7 +50,7 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'itchyny/landscape.vim'
 
-set t_Co=256
+"set t_Co=256
 colorscheme badwolf
 "--------------------------------------
 " End Neobundle Settings.
@@ -63,3 +63,6 @@ filetype plugin indent on
 " as necessary
 NeoBundleCheck
 
+"fileencording
+set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
+set fileformats=unix,dos,mac
