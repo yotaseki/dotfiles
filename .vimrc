@@ -14,7 +14,7 @@ set softtabstop=4
 set autoindent
 set smartindent
 set backspace=2
-set backup
+set nobackup
 "set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 "-------------------------------------
