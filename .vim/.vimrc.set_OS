@@ -1,0 +1,20 @@
+" Unix —pİ’è
+if has('unix') 
+    set t_Co=256
+endif
+
+
+" Mac —pİ’è
+if has('mac')
+endif
+
+
+" Unix ‚Æ Mac ‚Ì‹¤’Êİ’è
+if has('unix') || has('mac')
+
+endif
+
+" Windows 32bit, Windows 64bit ‚Ì‚Ç‚¿‚ç‚©
+if has('win32') || has ('win64')
+	
+endif

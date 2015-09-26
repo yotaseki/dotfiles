@@ -17,6 +17,7 @@ set backspace=2
 set nobackup
 "set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
+source ~/.vim/.vimrc.set_OS
 "-------------------------------------
 " Start Neobundle Settings.
 "-------------------------------------
@@ -41,7 +42,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
-
 source ~/.vim/.vimrc.set_plugins
 "--------------------------------------
 "colorscheme
@@ -50,8 +50,6 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'altercation/vim-colors-solarized'
-
-"set t_Co=256
 colorscheme badwolf
 "--------------------------------------
 " End Neobundle Settings.
