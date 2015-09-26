@@ -16,5 +16,5 @@ endif
 
 " Windows 32bit, Windows 64bit ‚Ì‚Ç‚¿‚ç‚©
 if has('win32') || has ('win64')
-	
+	set guifont=MS_Gothic:h11
 endif
