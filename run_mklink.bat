@@ -7,11 +7,11 @@ mklink /D %HOMEPATH%\.vim %DOTPATH%\.vim
 mklink %HOMEPATH%\.vimrc %DOTPATH%\.vimrc
 mklink %HOMEPATH%\.gvimrc %DOTPATH%\.gvimrc
 echo %DOTPATH%
-echo �ւ̃V���{���b�N�����N��%HOMEPATH%�ɍ쐬���܂���
+echo へのシンボリックリンクを%HOMEPATH%に作成しました
 TIMEOUT /T -1
 goto End
  
 :NotAdmin 
-echo �Ǘ��Ҍ����Ŏ��s���Ă�������
+echo 管理者権限で実行してください
 TIMEOUT /T -1
 :End
