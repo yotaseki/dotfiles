@@ -31,6 +31,14 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "--------------------------------------
+"colorscheme
+"--------------------------------------
+NeoBundle 'sjl/badwolf'
+NeoBundle 'mrkn/mrkn256.vim'
+NeoBundle 'itchyny/landscape.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+colorscheme badwolf
+"--------------------------------------
 " Plugins
 "--------------------------------------
 NeoBundle 'scrooloose/nerdtree'
@@ -42,15 +50,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 source ~/.vim/.vimrc.set_plugins
-"--------------------------------------
-"colorscheme
-"--------------------------------------
-NeoBundle 'sjl/badwolf'
-NeoBundle 'mrkn/mrkn256.vim'
-NeoBundle 'itchyny/landscape.vim'
-NeoBundle 'altercation/vim-colors-solarized'
-colorscheme badwolf
 "--------------------------------------
 " End Neobundle Settings.
 "--------------------------------------

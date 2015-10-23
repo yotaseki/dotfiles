@@ -40,15 +40,15 @@ let g:lightline = {
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [
-	\	[ 'mode', 'paste' ],
-	\	[ 'fugitive', 'gitgutter', 'filename']
-	\	],
-	\   'right': [
-	\	['lineinfo', 'syntastic'],
-	\	['percent'],
-	\	['fileformat','fileencoding','filetype'],
-	\	]
-	\ },
+    \	[ 'mode', 'paste' ],
+    \	[ 'fugitive', 'gitgutter', 'filename']
+    \	],
+    \   'right': [
+    \	['lineinfo', 'syntastic'],
+    \	['percent'],
+    \	['fileformat','fileencoding','filetype'],
+    \	]
+    \ },
         \ 'component_function': {
         \   'modified': 'MyModified',
         \   'readonly': 'MyReadonly',
@@ -58,8 +58,8 @@ let g:lightline = {
         \   'filetype': 'MyFiletype',
         \   'fileencoding': 'MyFileencoding',
         \   'mode': 'MyMode',
-	\   'syntastic': 'SyntasticStatuslineFlag',
-	\   'gitgutter': 'MyGitGutter',
+    \   'syntastic': 'SyntasticStatuslineFlag',
+    \   'gitgutter': 'MyGitGutter',
         \ },
         \ }
 
@@ -126,3 +126,11 @@ function! MyGitGutter()
   endfor
   return join(ret, ' ')
 endfunction
+"******************************************
+" vim-indent-guides
+"******************************************
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkSlateBlue ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=MidnightBlue ctermbg=4
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
