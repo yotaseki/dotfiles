@@ -21,8 +21,8 @@ endfunction"}}}
 "******************************************
 " quickrun
 "******************************************
+au FileType qf nnoremap <silent><buffer>q :quit<CR>
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-
 
 "******************************************
 " gitgutter
@@ -130,7 +130,12 @@ endfunction
 " vim-indent-guides
 "******************************************
 let g:indent_guides_auto_colors = 0
+
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=SlateBlue1 ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=plum ctermbg=4
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey30 ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey20 ctermbg=4
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkSlateBlue ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=MidnightBlue ctermbg=4
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=MidnightBlue ctermbg=4
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1

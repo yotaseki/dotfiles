@@ -29,7 +29,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
  
 " neobundle control in itself
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 "--------------------------------------
 "colorscheme
 "--------------------------------------
@@ -37,6 +36,7 @@ NeoBundle 'sjl/badwolf'
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 colorscheme badwolf
 "--------------------------------------
 " Plugins
