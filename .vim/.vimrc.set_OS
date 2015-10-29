@@ -1,6 +1,7 @@
 " Unix ópê›íË
 if has('unix') 
     set t_Co=256
+    colorscheme badwolf
 endif
 
 
@@ -17,4 +18,5 @@ endif
 " Windows 32bit, Windows 64bit ÇÃÇ«ÇøÇÁÇ©
 if has('win32') || has ('win64')
 	set guifont=MS_Gothic:h13:b
+    colorscheme Tomorrow-Night-Blue
 endif

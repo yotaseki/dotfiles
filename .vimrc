@@ -37,8 +37,6 @@ NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'itchyny/landscape.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
-colorscheme Tomorrow-Night-Blue
-"colorscheme badwolf
 "--------------------------------------
 " Plugins
 "--------------------------------------
