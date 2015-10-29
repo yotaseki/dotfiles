@@ -131,11 +131,7 @@ endfunction
 "******************************************
 let g:indent_guides_auto_colors = 0
 
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=SlateBlue1 ctermbg=3
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=plum ctermbg=4
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey30 ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey20 ctermbg=4
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=DarkSlateBlue ctermbg=3
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=MidnightBlue ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=DarkSlateBlue ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=seashell ctermbg=3
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
