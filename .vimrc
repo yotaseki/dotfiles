@@ -15,6 +15,8 @@ set autoindent
 set smartindent
 set backspace=2
 set nobackup
+set hlsearch
+set ic
 "set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 source ~/.vim/.vimrc.set_OS
