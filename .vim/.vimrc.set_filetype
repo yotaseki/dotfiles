@@ -1,0 +1,6 @@
+let fts = ['c','cpp']
+if index(fts, &filetype) == -1
+	let g:neocomplete#enable_at_startup = 1
+	set tag=tags
+	nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+endif

@@ -7,7 +7,7 @@ autocmd InsertLeave *   set noshellslash
 set iminsert=0
 set imsearch=0
 set laststatus=2
-set expandtab
+"set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -20,6 +20,8 @@ set ic
 "set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 source ~/.vim/.vimrc.set_OS
+"search"
+vnoremap * "zy:let @/ = @z<CR>n"
 "-------------------------------------
 " Start Neobundle Settings.
 "-------------------------------------
@@ -52,7 +54,21 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Shougo/vimproc.vim', {
+            \ 'build' : {
+            \ 'windows' : 'make -f make_mingw32.mak',
+            \ 'cygwin' : 'make -f make_cygwin.mak',
+            \ 'mac' : 'make -f make_mac.mak',
+            \ 'unix' : 'make -f make_unix.mak',
+            \ },
+            \ }
+NeoBundle 'Shougo/context_filetype.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'justmao945/vim-clang'
+NeoBundle 'Shougo/neoinclude.vim'
 source ~/.vim/.vimrc.set_plugins
+source ~/.vim/.vimrc.set_filetype
 "--------------------------------------
 " End Neobundle Settings.
 "--------------------------------------

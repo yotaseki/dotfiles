@@ -15,7 +15,7 @@ nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
 nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
-    nmap <buffer> <ESC> <Plug>(unite_exit)
+	nmap <buffer> <ESC> <Plug>(unite_exit)
 endfunction"}}}
 
 "******************************************
@@ -36,95 +36,95 @@ let g:gitgutter_sign_removed = 'x'
 "******************************************
 
 let g:lightline = {
-        \ 'colorscheme': 'powerline',
-        \ 'mode_map': {'c': 'NORMAL'},
-        \ 'active': {
-        \   'left': [
-    \	[ 'mode', 'paste' ],
-    \	[ 'fugitive', 'gitgutter', 'filename']
-    \	],
-    \   'right': [
-    \	['lineinfo', 'syntastic'],
-    \	['percent'],
-    \	['fileformat','fileencoding','filetype'],
-    \	]
-    \ },
-        \ 'component_function': {
-        \   'modified': 'MyModified',
-        \   'readonly': 'MyReadonly',
-        \   'fugitive': 'MyFugitive',
-        \   'filename': 'MyFilename',
-        \   'fileformat': 'MyFileformat',
-        \   'filetype': 'MyFiletype',
-        \   'fileencoding': 'MyFileencoding',
-        \   'mode': 'MyMode',
-    \   'syntastic': 'SyntasticStatuslineFlag',
-    \   'gitgutter': 'MyGitGutter',
-        \ },
-        \ }
+			\ 'colorscheme': 'powerline',
+			\ 'mode_map': {'c': 'NORMAL'},
+			\ 'active': {
+			\   'left': [
+			\	[ 'mode', 'paste' ],
+			\	[ 'fugitive', 'gitgutter', 'filename']
+			\	],
+			\   'right': [
+			\	['lineinfo', 'syntastic'],
+			\	['percent'],
+			\	['fileformat','fileencoding','filetype'],
+			\	]
+			\ },
+			\ 'component_function': {
+			\   'modified': 'MyModified',
+			\   'readonly': 'MyReadonly',
+			\   'fugitive': 'MyFugitive',
+			\   'filename': 'MyFilename',
+			\   'fileformat': 'MyFileformat',
+			\   'filetype': 'MyFiletype',
+			\   'fileencoding': 'MyFileencoding',
+			\   'mode': 'MyMode',
+			\   'syntastic': 'SyntasticStatuslineFlag',
+			\   'gitgutter': 'MyGitGutter',
+			\ },
+			\ }
 
 function! MyModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+	return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
+	return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
 endfunction
 
 function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
+	return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+				\ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+				\  &ft == 'unite' ? unite#get_status_string() :
+				\  &ft == 'vimshell' ? vimshell#get_status_string() :
+				\ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
+				\ ('' != MyModified() ? ' ' . MyModified() : '')
 endfunction
 
 function! MyFugitive()
-  try
-    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
-      return fugitive#head()
-    endif
-  catch
-  endtry
-  return ''
+	try
+		if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
+			return fugitive#head()
+		endif
+	catch
+	endtry
+	return ''
 endfunction
 
 function! MyFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
+	return winwidth(0) > 70 ? &fileformat : ''
 endfunction
 
 function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+	return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
 endfunction
 
 function! MyFileencoding()
-  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+	return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
 endfunction
 
 function! MyMode()
-  return winwidth(0) > 60 ? lightline#mode() : ''
+	return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
 function! MyGitGutter()
-  if ! exists('*GitGutterGetHunkSummary')
-        \ || ! get(g:, 'gitgutter_enabled', 0)
-        \ || winwidth('.') <= 90
-    return ''
-  endif
-  let symbols = [
-        \ g:gitgutter_sign_added . ' ',
-        \ g:gitgutter_sign_modified . ' ',
-        \ g:gitgutter_sign_removed . ' '
-        \ ]
-  let hunks = GitGutterGetHunkSummary()
-  let ret = []
-  for i in [0, 1, 2]
-    if hunks[i] > 0
-      call add(ret, symbols[i] . hunks[i])
-    endif
-  endfor
-  return join(ret, ' ')
+	if ! exists('*GitGutterGetHunkSummary')
+				\ || ! get(g:, 'gitgutter_enabled', 0)
+				\ || winwidth('.') <= 90
+		return ''
+	endif
+	let symbols = [
+				\ g:gitgutter_sign_added . ' ',
+				\ g:gitgutter_sign_modified . ' ',
+				\ g:gitgutter_sign_removed . ' '
+				\ ]
+	let hunks = GitGutterGetHunkSummary()
+	let ret = []
+	for i in [0, 1, 2]
+		if hunks[i] > 0
+			call add(ret, symbols[i] . hunks[i])
+		endif
+	endfor
+	return join(ret, ' ')
 endfunction
 "******************************************
 " vim-indent-guides
@@ -150,3 +150,49 @@ let g:indent_guides_guide_size=1
 "        autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
 "    augroup END
 "endif
+"*********************************************
+"neocomplete
+"*********************************************
+if !exists('g:neocomplete#force_omni_input_patterns')
+	let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_overwrite_completefunc = 1
+let g:neocomplete#force_omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+"*********************************************
+"vim-clang
+"  - vim-gnome
+"  - clang-format-3.x
+"  - clang-3.x
+"*********************************************
+" disable auto completion for vim-clanG
+let g:clang_auto = 0
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+let g:clang_use_library = 1
+" default 'longest' can not work with neocomplete
+let g:clang_c_completeopt   = 'menuone'
+let g:clang_cpp_completeopt = 'menuone'
+
+if executable('clang-3.6')
+	let g:clang_exec = 'clang-3.6'
+elseif executable('clang-3.5')
+	let g:clang_exec = 'clang-3.5'
+elseif executable('clang-3.4')
+	let g:clang_exec = 'clang-3.4'
+else
+	let g:clang_exec = 'clang'
+endif
+
+if executable('clang-format-3.6')
+	let g:clang_format_exec = 'clang-format-3.6'
+elseif executable('clang-format-3.5')
+	let g:clang_format_exec = 'clang-format-3.5'
+elseif executable('clang-format-3.4')
+	let g:clang_format_exec = 'clang-format-3.4'
+else
+	let g:clang_exec = 'clang-format'
+endif
+
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
