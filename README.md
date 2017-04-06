@@ -1,13 +1,17 @@
-#dotfiles  
----
-Gitとvimの勉強を兼ねて作られたリポジトリである  
-徐々に.vimrcをカスタマイズしていく予定
+# dotfiles  
 
----  
+#### Requirement pkg
+ git vim
 
-####環境構築
-  1. clone  
-  2. ホームディレクトリに.vimと.vimrcのシンボリックリンクを作成する  
-  3. submoduleであるneobundleをinit -> update  
-  4. vimを起動してプラグインをinstall  
-  5. neobundleを使用して入れたcolorschemeは.vim/colorsフォルダを作成して中にcolorschemeファイルをコピーする(でないと起動時読み込まれないため)  
+#### how to install
+
+install vimrc
+````bash
+  $ git clone <URL> --recursive 
+  $ cd dotfilses
+  $ ./run_ln.sh
+  $ vim
+  ... install pkgs ...
+  $ mkdir .vim/colors
+  $ cp -r .vim/bundle/*/colors/*.vim .vim/colors
+````
