@@ -1,6 +1,6 @@
 # dotfiles  
 
-#### Requirement pkg
+#### Requirements
  git vim
 
 #### how to install
