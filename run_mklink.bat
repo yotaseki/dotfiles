@@ -6,6 +6,7 @@ if NOT %ERRORLEVEL% EQU 0 goto NotAdmin
 mklink /D %HOMEPATH%\.vim %DOTPATH%\.vim
 mklink %HOMEPATH%\.vimrc %DOTPATH%\.vimrc
 mklink %HOMEPATH%\.gvimrc %DOTPATH%\.gvimrc
+mklink %HOMEPATH%\.latexmkrc %DOTPATH%\.latexmkrc
 echo %DOTPATH%
 echo へのシンボリックリンクを%HOMEPATH%に作成しました
 TIMEOUT /T -1
