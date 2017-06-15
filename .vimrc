@@ -75,6 +75,7 @@ source ~/.vim/.vimrc.set_filetype
 " vimtex
 "--------------------------------------
 " let g:vimtex_latexmk_continuous = 1
+map <F5> \ll
 let g:vimtex_latexmk_options = '-pdfdvi'
 let g:vimtex_view_general_viewer = 'evince'
 let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
