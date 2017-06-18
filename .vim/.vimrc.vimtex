@@ -1,3 +1,5 @@
+"" Referenced https://www8281uo.sakura.ne.jp/blog/?p=305
+
 if !exists("g:os")
 	if has("win64") || has("win32") || has("win16") || has('win32unix')
 		let g:os = "Windows"
