@@ -71,14 +71,17 @@ NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'lervag/vimtex'
 source ~/.vim/.vimrc.set_plugins
 source ~/.vim/.vimrc.set_filetype
+source ~/.vim/.vimrc.vimtex
 "--------------------------------------
 " vimtex
 "--------------------------------------
 " let g:vimtex_latexmk_continuous = 1
 nmap <F5> \ll
-let g:vimtex_latexmk_options = '-pdfdvi'
-let g:vimtex_view_general_viewer = 'evince'
-let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+"let g:tex_flavor='latex'
+"let g:vimtex_latexmk_continuous = 1
+"let g:vimtex_latexmk_background = 1
+"let g:vimtex_latexmk_options = '-pdfdvi'
+"let g:vimtex_view_general_viewer = 'evince'
 "--------------------------------------
 " End Neobundle Settings.
 "--------------------------------------
