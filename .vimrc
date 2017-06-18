@@ -18,6 +18,7 @@ set nobackup
 set hlsearch
 set ic
 set number
+set nohlsearch
 "set backupdir=~/Documents/vim~
 source ~/.vim/.vimrc.set_hotkey
 source ~/.vim/.vimrc.set_OS
@@ -47,6 +48,7 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "--------------------------------------
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Townk/vim-autoclose'
+let g:AutoCloseExpandSpace=0
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Shougo/neomru.vim'
@@ -69,6 +71,8 @@ NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'justmao945/vim-clang'
 NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'lervag/vimtex'
+NeoBundle 'vim-scripts/vim-auto-save'
+let g:auto_save = 0
 source ~/.vim/.vimrc.set_plugins
 source ~/.vim/.vimrc.set_filetype
 source ~/.vim/.vimrc.vimtex
