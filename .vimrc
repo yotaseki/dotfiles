@@ -2,6 +2,7 @@
 "env
 "------------------------------------- 
 syntax on
+filetype on
 autocmd InsertEnter *   set shellslash
 autocmd InsertLeave *   set noshellslash
 set iminsert=0
@@ -65,14 +66,13 @@ NeoBundle 'Shougo/vimproc.vim', {
             \ 'unix' : 'make -f make_unix.mak',
             \ },
             \ }
-NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'justmao945/vim-clang'
 NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
-let g:auto_save = 0
+"let g:auto_save = 0
 source ~/.vim/.vimrc.set_plugins
 source ~/.vim/.vimrc.set_filetype
 source ~/.vim/.vimrc.vimtex
@@ -90,3 +90,8 @@ NeoBundleCheck
 "fileencording
 set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
 set fileformats=unix,dos,mac
+
+"--------------------------------------
+" filetype
+"--------------------------------------
+source ~/.vim/.vimrc.filetype
