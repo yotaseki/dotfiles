@@ -74,7 +74,6 @@ NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
 "let g:auto_save = 0
 source ~/.vim/.vimrc.set_plugins
-source ~/.vim/.vimrc.set_filetype
 source ~/.vim/.vimrc.vimtex
 "--------------------------------------
 " End Neobundle Settings.
