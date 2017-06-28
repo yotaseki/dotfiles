@@ -15,7 +15,7 @@ set autoindent
 set smartindent
 set backspace=start,eol,indent
 set nobackup
-set hlsearch
+"set hlsearch
 set ic
 set number
 set nohlsearch
