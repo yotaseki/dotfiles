@@ -6,7 +6,6 @@ autocmd BufRead,BufNewFile *.tex	call s:SetTex()
 autocmd BufRead,BufNewFile *.latex  call s:SetTex()
 """""""""""""""""""""""""""TEX
 function s:SetC_Cpp()
-	:!g++ %
 	" neocomplete
 	let g:neocomplete#enable_at_startup = 1
 	" disable auto completion for vim-clanG
