@@ -6,7 +6,10 @@
 #### how to install
 
 install vimrc
+* Ubuntu 14.04+
 ````bash
+  $ sudo apt update
+  $ sudo apt install vim-gnome
   $ git clone <URL> --recursive 
   $ cd dotfilses
   $ ./run_ln.sh
