@@ -55,21 +55,21 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'airblade/vim-gitgutter'
 "NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'Shougo/neocomplcache.vim'
+"NeoBundle 'Shougo/neocomplete.vim'
+"NeoBundle 'Shougo/vimproc.vim', {
+"            \ 'build' : {
+"            \ 'windows' : 'make -f make_mingw32.mak',
+"            \ 'cygwin' : 'make -f make_cygwin.mak',
+"            \ 'mac' : 'make -f make_mac.mak',
+"            \ 'unix' : 'make -f make_unix.mak',
+"            \ },
+"            \ }
+"NeoBundle 'justmao945/vim-clang'
+"NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'Townk/vim-autoclose'
 let g:AutoCloseExpandSpace=0
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-            \ 'build' : {
-            \ 'windows' : 'make -f make_mingw32.mak',
-            \ 'cygwin' : 'make -f make_cygwin.mak',
-            \ 'mac' : 'make -f make_mac.mak',
-            \ 'unix' : 'make -f make_unix.mak',
-            \ },
-            \ }
-NeoBundle 'justmao945/vim-clang'
-NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
 source ~/.vim/.vimrc.plugins
