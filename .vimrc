@@ -21,8 +21,8 @@ set ic
 set number
 set nohlsearch
 "set backupdir=~/Documents/vim~
-source ~/.vim/.vimrc.set_hotkey
-source ~/.vim/.vimrc.set_OS
+source ~/.vim/.vimrc.keymap
+source ~/.vim/.vimrc.OS
 "search"
 vnoremap * "zy:let @/ = @z<CR>n"
 "-------------------------------------
@@ -47,17 +47,19 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "--------------------------------------
 " Plugins
 "--------------------------------------
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'Shougo/neomru.vim'
+"NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'thinca/vim-quickrun'
+"NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Townk/vim-autoclose'
 let g:AutoCloseExpandSpace=0
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimproc.vim', {
             \ 'build' : {
             \ 'windows' : 'make -f make_mingw32.mak',
@@ -66,15 +68,11 @@ NeoBundle 'Shougo/vimproc.vim', {
             \ 'unix' : 'make -f make_unix.mak',
             \ },
             \ }
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'justmao945/vim-clang'
 NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
-"let g:auto_save = 0
-source ~/.vim/.vimrc.set_plugins
-source ~/.vim/.vimrc.vimtex
+source ~/.vim/.vimrc.plugins
 "--------------------------------------
 " End Neobundle Settings.
 "--------------------------------------

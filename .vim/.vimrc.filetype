@@ -2,22 +2,13 @@ autocmd BufRead,BufNewFile *.c		call s:SetC_Cpp()
 autocmd BufRead,BufNewFile *.cpp	call s:SetC_Cpp()
 autocmd BufRead,BufNewFile *.h		call s:SetC_Cpp()
 autocmd BufRead,BufNewFile *.hpp	call s:SetC_Cpp()
-autocmd BufRead,BufNewFile *.tex	call s:SetTex()
-autocmd BufRead,BufNewFile *.latex  call s:SetTex()
-"""""""""""""""""""""""""""TEX
 function s:SetC_Cpp()
-	" neocomplete
-	let g:neocomplete#enable_at_startup = 1
-	" disable auto completion for vim-clanG
-	let g:clang_auto = 0
-	let g:clang_complete_auto = 0
-	let g:clang_auto_select = 0
-	let g:clang_use_library = 1
-	set tag=tags
-	nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+	source ~/.vim/.config/c_cpp.vimrc
 endfunction
 
-	"""""""""""""""""""""""""""C/C++
+autocmd BufRead,BufNewFile *.tex	call s:SetTex()
+autocmd BufRead,BufNewFile *.latex  call s:SetTex()
 function s:SetTex()
+	source ~/.vim/.config/tex.vimrc
 	let g:auto_save = 1
 endfunction
