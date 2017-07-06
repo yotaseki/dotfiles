@@ -9,6 +9,7 @@ endfunction
 autocmd BufRead,BufNewFile *.tex	call s:SetTex()
 autocmd BufRead,BufNewFile *.latex  call s:SetTex()
 function s:SetTex()
-	source ~/.vim/.config/tex.vimrc
+	"source ~/.vim/.config/tex.vimrc
+	source ~/.vim/.config/tex_quickrun.vimrc
 	let g:auto_save = 1
 endfunction

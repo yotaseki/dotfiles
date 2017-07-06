@@ -1,5 +1,6 @@
 "" Referenced https://www8281uo.sakura.ne.jp/blog/?p=305
 
+nmap <F5> \ll\le
 if !exists("g:os")
 	if has("win64") || has("win32") || has("win16") || has('win32unix')
 		let g:os = "Windows"
@@ -62,7 +63,6 @@ elseif (g:os == "Darwin")
 endif
 
 if has('unix')
-	nmap <F5> \ll\le
 	let g:vimtex_view_general_viewer = 'evince'
 endif
 

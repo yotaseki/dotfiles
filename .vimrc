@@ -53,7 +53,6 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'Shougo/neocomplcache.vim'
 "NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'Shougo/vimproc.vim', {
@@ -66,6 +65,7 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "            \ }
 "NeoBundle 'justmao945/vim-clang'
 "NeoBundle 'Shougo/neoinclude.vim'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'Townk/vim-autoclose'
 let g:AutoCloseExpandSpace=0
 NeoBundle 'itchyny/lightline.vim'
