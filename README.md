@@ -1,15 +1,11 @@
 # dotfiles  
 
-#### Requirements
- git vim
+### how to install
 
-#### how to install
-
-install vimrc
-* Ubuntu 14.04+
+* Ubuntu
 ````bash
   $ sudo apt update
-  $ sudo apt install vim-gnome
+  $ sudo apt install git vim
   $ git clone <URL> --recursive 
   $ cd dotfilses
   $ ./run_ln.sh
@@ -17,4 +13,9 @@ install vimrc
   ... install pkgs ...
   $ mkdir .vim/colors
   $ cp -r .vim/bundle/*/colors/*.vim .vim/colors
+````
+
+#### Use vimtex
+````bash
+  $ sudo apt install texlive texlive-lang-cjk xdvik-ja dvipsk-ja gv texlive-fonts-recommended texlive-fonts-extra latexmk
 ````
