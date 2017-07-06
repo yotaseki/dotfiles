@@ -129,6 +129,9 @@ endfunction
 ""*********************************************
 ""neocomplete
 ""*********************************************
+nmap <F2> :NeoCompleteDisable
+nmap <S-F2> :NeoCompleteDisable
+
 if neobundle#tap('neocomplete')
 	call neobundle#config({
 				\   'depends': ['Shougo/context_filetype.vim', 'ujihisa/neco-look', 'pocke/neco-gh-issues', 'Shougo/neco-syntax'],
@@ -149,7 +152,7 @@ if neobundle#tap('neocomplete')
 	let	g:neocomplete#auto_completion_start_length = 2
 	" preview window を閉じない
 	let	g:neocomplete#enable_auto_close_preview = 0
-	AutoCmd InsertLeave * silent! pclose!
+	autocmd InsertLeave * silent! pclose!
 
 	let g:neocomplete#max_keyword_width = 10000
 
@@ -181,10 +184,11 @@ if neobundle#tap('neocomplete')
 					\}
 	endif
 	let g:neocomplete#data_directory = $HOME . '/.vim/cache/neocomplete' 
-	call neocomplete#custom#source('look', 'min_pattern_length', 1)
+
+	"call neocomplete#custom#source('look','min_pattern_length',1)
+
 	call neobundle#untap()
 endif
-
 """""""""""""""
 " vim-marching  :Referenced(http://pocke.hatenablog.com/entry/2015/10/01/222216)
 """""""""""""""

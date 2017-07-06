@@ -52,7 +52,7 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'ujihisa/unite-colorscheme'
 "NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neocomplete'
 "NeoBundle 'Shougo/vimproc.vim', {
 "            \ 'build' : {
 "            \ 'windows' : 'make -f make_mingw32.mak',
