@@ -197,7 +197,7 @@ if neobundle#tap('vim-marching')
 				\   'autoload': {
 				\     'filetypes': ['c', 'cpp']
 				\   },
-				\   'depends': ['Shougo/vimproc.vim', 'osyo-manga/vim-reunions']
+				\   'depends': ['Shougo/vimproc', 'osyo-manga/vim-reunions']
 				\ })
 
 	let g:marching_enable_neocomplete = 1

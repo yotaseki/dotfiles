@@ -17,6 +17,7 @@ let g:quickrun_config['tex'] = {
 			\ '%S:p:r.out'
 			\ ],
 			\ 'exec': '%c %o %a %s',
+			\ '*': {'runmode': 'async:remote:vimproc'},
 			\ }
 
 " 部分的に選択してコンパイル
@@ -63,4 +64,4 @@ vnoremap <silent><buffer> <F5> :QuickRun -mode v -type tmptex<CR>
 
 " QuickRun and view compile result quickly (but don't preview pdf file)
 nnoremap <silent><F5> :QuickRun<CR>
-autocmd BufWritePost,FileWritePost *.tex :QuickRun
+" autocmd BufWritePost,FileWritePost *.tex :QuickRun
