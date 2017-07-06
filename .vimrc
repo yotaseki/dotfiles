@@ -52,7 +52,6 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'ujihisa/unite-colorscheme'
 "NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/neocomplcache.vim'
-"NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimproc', {
             \ 'build' : {
             \ 'windows' : 'make -f make_mingw32.mak',
@@ -63,6 +62,7 @@ NeoBundle 'Shougo/vimproc', {
             \ }
 "NeoBundle 'justmao945/vim-clang'
 "NeoBundle 'Shougo/neoinclude.vim'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-quickrun'
