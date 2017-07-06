@@ -126,141 +126,93 @@ function! MyGitGutter()
 	endfor
 	return join(ret, ' ')
 endfunction
-""******************************************
-"" vim-indent-guides
-""******************************************
-"let g:indent_guides_auto_colors = 0
-"
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=gray20 ctermbg=4
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=gray40 ctermbg=3
-""autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=DarkSlateBlue ctermbg=4
-""autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=seashell ctermbg=3
-"let g:indent_guides_enable_on_vim_startup=1
-"let g:indent_guides_guide_size=1
-""*********************************************
-""Seiya (clear background)
-""*********************************************
-""if !has('gui_running')
-""    augroup seiya
-""        autocmd!
-""        autocmd VimEnter,ColorScheme * highlight Normal ctermbg=none
-""        autocmd VimEnter,ColorScheme * highlight LineNr ctermbg=none
-""        autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
-""        autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
-""        autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
-""    augroup END
-""endif
-""*********************************************
-""vim-clang
-""  - vim-gnome
-""  - clang-format-3.x
-""  - clang-3.x
-""*********************************************
-"" disable auto completion for vim-clanG
-"let g:clang_auto = 0
-"let g:clang_complete_auto = 0 
-"let g:clang_auto_select = 0
-"let g:clang_use_library = 1
-"
-"" default 'longest' can not work with neocomplete
-"let g:clang_c_completeopt   = 'menuone'
-"let g:clang_cpp_completeopt = 'menuone'
-"
-"if executable('clang-3.6')
-"	let g:clang_exec = 'clang-3.6'
-"elseif executable('clang-3.5')
-"	let g:clang_exec = 'clang-3.5'
-"elseif executable('clang-3.4')
-"	let g:clang_exec = 'clang-3.4'
-"else
-"	let g:clang_exec = 'clang'
-"endif
-"
-"if executable('clang-format-3.6')
-"	let g:clang_format_exec = 'clang-format-3.6'
-"elseif executable('clang-format-3.5')
-"	let g:clang_format_exec ='clang-format-3.5'
-"elseif executable('clang-format-3.4')
-"	let g:clang_format_exec ='clang-format-3.4'
-"else
-"	let g:clang_exec ='clang-format'
-"endif
-"
-"let g:clang_c_options ='-std=c11'
-"let g:clang_cpp_options ='-std=c++11 -stdlib=libc++'
-"set tag=tags
-"nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
-"
 ""*********************************************
 ""neocomplete
 ""*********************************************
-""Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
-"let g:neocomplete#enable_at_startup = 1
-""" Disable AutoComplPop.
-"let g:acp_enableAtStartup = 0
-"" Use smartcase.
-"let g:neocomplete#enable_smart_case = 1
-"" Set minimum syntax keyword length.
-"let g:neocomplete#sources#syntax#min_keyword_length = 3
-"
-"" Define dictionary.
-"let g:neocomplete#sources#dictionary#dictionaries = {
-"			\ 'default' : '',
-"			\ 'vimshell' : $HOME.'/.vimshell_hist',
-"			\ 'scheme' : $HOME.'/.gosh_completions'
-"			\ }
-"
-"" Define keyword.
-"if !exists('g:neocomplete#keyword_patterns')
-"	let g:neocomplete#keyword_patterns = {}
-"endif
-"let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-"
-"" Plugin key-mappings.
-"inoremap <expr><C-g> neocomplete#undo_completion()
-"inoremap <expr><C-l> neocomplete#complete_common_string()
-"
-"" Recommended key-mappings.
-"" <CR>: close popup and save indent.
-""inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-""function! s:my_cr_function()
-""	return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-""	" For no inserting <CR> key.
-""	"return pumvisible() ? "\<C-y>" : "\<CR>"
-""endfunction
-"" <TAB>: completion.
-"" <C-h>, <BS>: close popup and delete backword char.
-"inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <silent> <expr> <Tab> pumvisible() ? "\<C-x>\<C-o>\<C-p>" : "\<Tab>"
-"" Close popup by <Space>.
-""inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-"
-"" AutoComplPop like behavior.
-""let g:neocomplete#enable_auto_select = 1
-"
-"" Shell like behavior(not recommended).
-""set completeopt+=longest
-""let g:neocomplete#enable_auto_select = 1
-""let g:neocomplete#disable_auto_complete = 1
-""inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-"
-"" Enable omni completion.
-"" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-"" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-"" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-"" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"
-"" Enable heavy omni completion.
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"	let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-"let g:clang_diagsopt = ''
-"setlocal omnifunc=
-""let g:neocomplete#sources#omni#input_patterns.php = '[^.\t]->\h\w*\|\h\w*::'
-""let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-""let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"
-"" For perlomni.vim setting.
-"" https://github.com/c9s/perlomni.vim
+if neobundle#tap('neocomplete')
+	call neobundle#config({
+				\   'depends': ['Shougo/context_filetype.vim', 'ujihisa/neco-look', 'pocke/neco-gh-issues', 'Shougo/neco-syntax'],
+				\ })
+
+	" 起動時に有効化
+	let g:neocomplete#enable_at_startup = 1
+	" 大文字が入力されるまで大文字小文字の区別を無視する
+	let g:neocomplete#enable_smart_case = 1
+	" _(アンダースコア)区切りの補完を有効化
+	let g:neocomplete#enable_underbar_completion = 1
+	let g:neocomplete#enable_camel_case_completion  =  1
+	" ポップアップメニューで表示される候補の数
+	let g:neocomplete#max_list = 20
+	" シンタックスをキャッシュするときの最小文字長
+	let g:neocomplete#sources#syntax#min_keyword_length = 3
+	" 補完を表示する最小文字数
+	let	g:neocomplete#auto_completion_start_length = 2
+	" preview window を閉じない
+	let	g:neocomplete#enable_auto_close_preview = 0
+	AutoCmd InsertLeave * silent! pclose!
+
+	let g:neocomplete#max_keyword_width = 10000
+
+
+	if !exists('g:neocomplete#delimiter_patterns')
+		let	g:neocomplete#delimiter_patterns={}
+	endif
+	let	g:neocomplete#delimiter_patterns.ruby = ['::']
+
+	if !exists('g:neocomplete#same_filetypes')
+		let g:neocomplete#same_filetypes = {}
+	endif
+	let	g:neocomplete#same_filetypes.ruby = 'eruby'
+
+
+	if !exists('g:neocomplete#force_omni_input_patterns')
+		let	g:neocomplete#force_omni_input_patterns = {}
+	endif
+
+	let	g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] 	*\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+	let g:neocomplete#force_omni_input_patterns.typescript = '[^. \t]\.\%(\h\w*\)\?'  "	Same as	JavaScript
+	let	g:neocomplete#force_omni_input_patterns.go = '[^. \t]\.\%(\h\w*\)\?' " Same	as JavaScript
+
+	let	s:neco_dicts_dir=$HOME . '/dicts'
+	if	isdirectory(s:neco_dicts_dir)
+		let	g:neocomplete#sources#dictionary#dictionaries =	{
+					\'ruby': s:neco_dicts_dir . '/ruby.dict',					
+					\  'javascript':  s:neco_dicts_dir  .  '/jquery.dict',     
+					\}
+	endif
+	let g:neocomplete#data_directory = $HOME . '/.vim/cache/neocomplete' 
+	call neocomplete#custom#source('look', 'min_pattern_length', 1)
+	call neobundle#untap()
+endif
+
+"""""""""""""""
+" vim-marching  :Referenced(http://pocke.hatenablog.com/entry/2015/10/01/222216)
+"""""""""""""""
+if neobundle#tap('vim-marching')
+	call neobundle#config({
+				\   'autoload': {
+				\     'filetypes': ['c', 'cpp']
+				\   },
+				\   'depends': ['Shougo/vimproc.vim', 'osyo-manga/vim-reunions']
+				\ })
+
+	let g:marching_enable_neocomplete = 1
+	call neobundle#untap()
+endif
+""""""""""""
+" neko-look
+""""""""""""
+if !exists('g:neocomplete#text_mode_filetypes')
+	let g:neocomplete#text_mode_filetypes = {}
+endif
+let g:neocomplete#text_mode_filetypes = {
+			\ 'rst': 1,
+			\ 'markdown': 1,
+			\ 'gitrebase': 1,
+			\ 'gitcommit': 1,
+			\ 'vcs-commit': 1,
+			\ 'hybrid': 1,
+			\ 'text': 1,
+			\ 'help': 1,
+			\ 'tex': 1,
+			\ }

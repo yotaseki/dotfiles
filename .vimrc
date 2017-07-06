@@ -52,7 +52,7 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'ujihisa/unite-colorscheme'
 "NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/neocomplcache.vim'
-"NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'Shougo/vimproc.vim', {
 "            \ 'build' : {
 "            \ 'windows' : 'make -f make_mingw32.mak',
@@ -72,6 +72,8 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'ujihisa/neco-look'
+NeoBundleLazy 'osyo-manga/vim-marching'
 source ~/.vim/.vimrc.plugins
 "--------------------------------------
 " End Neobundle Settings.
