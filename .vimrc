@@ -53,14 +53,14 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/neocomplcache.vim'
 "NeoBundle 'Shougo/neocomplete.vim'
-"NeoBundle 'Shougo/vimproc.vim', {
-"            \ 'build' : {
-"            \ 'windows' : 'make -f make_mingw32.mak',
-"            \ 'cygwin' : 'make -f make_cygwin.mak',
-"            \ 'mac' : 'make -f make_mac.mak',
-"            \ 'unix' : 'make -f make_unix.mak',
-"            \ },
-"            \ }
+NeoBundle 'Shougo/vimproc', {
+            \ 'build' : {
+            \ 'windows' : 'make -f make_mingw32.mak',
+            \ 'cygwin' : 'make -f make_cygwin.mak',
+            \ 'mac' : 'make -f make_mac.mak',
+            \ 'unix' : 'make -f make_unix.mak',
+            \ },
+            \ }
 "NeoBundle 'justmao945/vim-clang'
 "NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'tpope/vim-fugitive'
