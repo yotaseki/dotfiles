@@ -74,6 +74,7 @@ NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'ujihisa/neco-look'
 NeoBundleLazy 'osyo-manga/vim-marching'
+NeoBundle 'rhysd/github-complete.vim'
 source ~/.vim/.vimrc.plugins
 "--------------------------------------
 " End Neobundle Settings.
