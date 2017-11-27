@@ -192,17 +192,17 @@ endif
 """""""""""""""
 " vim-marching  :Referenced(http://pocke.hatenablog.com/entry/2015/10/01/222216)
 """""""""""""""
-if neobundle#tap('vim-marching')
-	call neobundle#config({
-				\   'autoload': {
-				\     'filetypes': ['c', 'cpp']
-				\   },
-				\   'depends': ['Shougo/vimproc', 'osyo-manga/vim-reunions']
-				\ })
-
-	let g:marching_enable_neocomplete = 1
-	call neobundle#untap()
-endif
+"if neobundle#tap('vim-marching')
+"	call neobundle#config({
+"				\   'autoload': {
+"				\     'filetypes': ['c', 'cpp']
+"				\   },
+"				\   'depends': ['Shougo/vimproc', 'osyo-manga/vim-reunions']
+"				\ })
+"
+"	let g:marching_enable_neocomplete = 1
+"	call neobundle#untap()
+"endif
 """"""""""""
 " neko-look
 """"""""""""

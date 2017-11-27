@@ -8,7 +8,7 @@ autocmd InsertLeave *   set noshellslash
 set iminsert=0
 set imsearch=0
 set laststatus=2
-"set expandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -52,14 +52,14 @@ NeoBundle 'chriskempson/vim-tomorrow-theme'
 "NeoBundle 'ujihisa/unite-colorscheme'
 "NeoBundle 'Shougo/neomru.vim'
 "NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'Shougo/vimproc', {
-            \ 'build' : {
-            \ 'windows' : 'make -f make_mingw32.mak',
-            \ 'cygwin' : 'make -f make_cygwin.mak',
-            \ 'mac' : 'make -f make_mac.mak',
-            \ 'unix' : 'make -f make_unix.mak',
-            \ },
-            \ }
+"NeoBundle 'Shougo/vimproc', {
+"            \ 'build' : {
+"            \ 'windows' : 'make -f make_mingw32.mak',
+"            \ 'cygwin' : 'make -f make_cygwin.mak',
+"            \ 'mac' : 'make -f make_mac.mak',
+"            \ 'unix' : 'make -f make_unix.mak',
+"            \ },
+"            \ }
 "NeoBundle 'justmao945/vim-clang'
 "NeoBundle 'Shougo/neoinclude.vim'
 NeoBundle 'Shougo/neocomplete'
@@ -70,10 +70,10 @@ NeoBundle 'Townk/vim-autoclose'
 let g:AutoCloseExpandSpace=0
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'lervag/vimtex'
+"NeoBundle 'lervag/vimtex'
 NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'ujihisa/neco-look'
-NeoBundleLazy 'osyo-manga/vim-marching'
+"NeoBundleLazy 'osyo-manga/vim-marching'
 NeoBundle 'rhysd/github-complete.vim'
 source ~/.vim/.vimrc.plugins
 "--------------------------------------
@@ -94,4 +94,4 @@ set fileformats=unix,dos,mac
 "--------------------------------------
 " filetype
 "--------------------------------------
-source ~/.vim/.vimrc.filetype
+"source ~/.vim/.vimrc.filetype
