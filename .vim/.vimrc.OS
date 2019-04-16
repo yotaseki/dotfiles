@@ -1,7 +1,7 @@
 " Unix ópê›íË
 if has('unix') 
     set t_Co=256
-    colorscheme badwolf
+    " colorscheme badwolf
 endif
 
 
